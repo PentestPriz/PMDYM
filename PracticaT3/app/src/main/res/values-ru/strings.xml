@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PracticaT3</string>
+    <string name="botonContinuar">Продолжить</string>
+    <string name="botonCancelar">Отменить</string>
+</resources>
