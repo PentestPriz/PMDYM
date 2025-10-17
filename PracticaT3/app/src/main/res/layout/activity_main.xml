@@ -20,8 +20,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="78dp"
+        android:text="@string/botonContinuar"
+        tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="492dp" />
 
     <Button
@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Button"
         tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="492dp" />
+        tools:layout_editor_absoluteY="492dp"
+        tools:text="@string/botonCancelar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
