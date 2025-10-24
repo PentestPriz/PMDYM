@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PracticaT3</string>
+    <string name="botonContinuar">Continuar</string>
+    <string name="botonCancelar">Cancelar</string>
+</resources>
