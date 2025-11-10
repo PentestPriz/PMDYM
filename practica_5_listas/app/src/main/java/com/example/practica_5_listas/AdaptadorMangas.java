@@ -1,13 +1,16 @@
 package com.example.practica_5_listas;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public abstract class AdaptadorMangas extends RecyclerView.Adapter<AdaptadorMangas.MangasViewHolder> {
+public class AdaptadorMangas extends RecyclerView.Adapter<AdaptadorMangas.MangasViewHolder> {
 
     //Atributos de la clase
     private Mangas[] listaMangas;
@@ -45,5 +48,16 @@ public abstract class AdaptadorMangas extends RecyclerView.Adapter<AdaptadorMang
         }//Cierre BindMangas
 
     }//Cierre mangasViewHolder
+
+    //Modificación del metodo onCreateViewHolder
+    @NonNull
+    @Override
+    public MangasViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.lista_mangas, parent, false);
+
+        return new MangasViewHolder(view, parent.getContext());
+
+    }//Cierre onCreateViewHolder
 
 }//Cierre AdaptadorMangas
