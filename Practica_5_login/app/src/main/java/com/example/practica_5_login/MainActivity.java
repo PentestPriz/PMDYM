@@ -50,9 +50,13 @@ public class MainActivity extends AppCompatActivity {
             String contraseña = tContraseña.getText().toString();
 
             //Si los campos coinciden con los valores designados da un mensaje de bienvenida
-            if (correo.equals("correo@correo.com") && contraseña.equals("psw")) {
+            if (correo.equals("correo@correo.com") && contraseña.equals("123")) {
                 tvMensaje.setText("Contraseña y correo correctos, bienvenido.");
-            }//Cierre if
-        });
+            } else {
+                //Cambia el color del texto a rojo y da un mensaje de error
+                tvMensaje.setTextColor(getResources().getColor(R.color.red));
+                tvMensaje.setText("Contraseña y/o correo incorrectos, prueba de nuevo.");
+            }//Cierre if - else
+        }); //Cierre bContinuar
     }//Cierre onCreate
 }//Cierre clase
