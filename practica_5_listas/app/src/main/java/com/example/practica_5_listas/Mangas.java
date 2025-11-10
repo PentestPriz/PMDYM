@@ -3,9 +3,9 @@ package com.example.practica_5_listas;
 public class Mangas {
 
     //Atributos de la clase
-    private String titulo;
+    public String titulo;
 
-    private String imagen;
+    public String imagen;
 
     //Constructor de la clase
     public Mangas(String titulo, String imagen) {

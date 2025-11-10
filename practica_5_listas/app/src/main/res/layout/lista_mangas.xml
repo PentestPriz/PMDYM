@@ -17,7 +17,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tituloView"
                 android:layout_width="67dp"
                 android:layout_height="23dp"
                 android:layout_marginStart="86dp"
@@ -27,11 +27,11 @@
                 android:text="TextView"
                 app:layout_constraintBottom_toTopOf="@+id/divider4"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/imagenView"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imagenView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -48,7 +48,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="?android:attr/listDivider"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/imagenView"
                 tools:layout_editor_absoluteX="-2dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
