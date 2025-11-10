@@ -60,4 +60,12 @@ public class AdaptadorMangas extends RecyclerView.Adapter<AdaptadorMangas.Mangas
 
     }//Cierre onCreateViewHolder
 
+    //Modificación de onBindViewHolder
+    @Override
+    public void onBindViewHolder(@NonNull MangasViewHolder holder, int position) {
+        holder.BindMangas(listaMangas[position]);
+    }//Cierre onBindViewHolder
+
+    
+
 }//Cierre AdaptadorMangas
