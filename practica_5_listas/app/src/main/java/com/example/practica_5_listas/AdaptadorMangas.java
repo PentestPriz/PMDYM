@@ -72,4 +72,10 @@ public class AdaptadorMangas extends RecyclerView.Adapter<AdaptadorMangas.Mangas
         return listaMangas.length;
     }//Cierre getItemCount
 
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
+
+
 }//Cierre AdaptadorMangasS
