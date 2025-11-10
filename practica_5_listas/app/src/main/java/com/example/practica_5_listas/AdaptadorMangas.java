@@ -66,6 +66,10 @@ public class AdaptadorMangas extends RecyclerView.Adapter<AdaptadorMangas.Mangas
         holder.BindMangas(listaMangas[position]);
     }//Cierre onBindViewHolder
 
-    
+    //Modificación del metodo getItemCount
+    @Override
+    public int getItemCount() {
+        return listaMangas.length;
+    }//Cierre getItemCount
 
-}//Cierre AdaptadorMangas
+}//Cierre AdaptadorMangasS
