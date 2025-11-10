@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         bContinuar = findViewById(R.id.bContinuar);
         sRecordar = findViewById(R.id.sRecordar);
         tvMensaje = findViewById(R.id.tvMensaje);
+        sRecordar = findViewById(R.id.sRecordar);
 
         //Código a ejecutar al clicar el botón continuar
         bContinuar.setOnClickListener(v -> {
@@ -51,7 +52,15 @@ public class MainActivity extends AppCompatActivity {
 
             //Si los campos coinciden con los valores designados da un mensaje de bienvenida
             if (correo.equals("correo@correo.com") && contraseña.equals("123")) {
-                tvMensaje.setText("Contraseña y correo correctos, bienvenido.");
+                //Cambio a color verde en caso de ser los datos correctos
+                tvMensaje.setTextColor(getResources().getColor(R.color.green));
+                //Da un mensaje u otro en función de si el switch está marcado
+                if(sRecordar.isChecked()) {
+                    tvMensaje.setText("Contraseña y correo correctos, bienvenido.\nSe han guardado tus datos de inicio de sesión.");
+                } else {
+                    tvMensaje.setText("Contraseña y correo correctos, bienvenido.");
+                }
+
             } else {
                 //Cambia el color del texto a rojo y da un mensaje de error
                 tvMensaje.setTextColor(getResources().getColor(R.color.red));
