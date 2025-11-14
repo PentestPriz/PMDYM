@@ -35,6 +35,12 @@ public class ActivityMenu extends AppCompatActivity {
         btnDesconectar = findViewById(R.id.btnDesconectar);
         tvMostrarCorreo = findViewById(R.id.tvMostrarCorreo);
 
+        //Intent de la clase main
+        Intent intentMain = getIntent();
+
+        //Obtengo el correo de la actividad anterior
+        tvMostrarCorreo.setText(intentMain.getStringExtra("CORREO"));
+
         //Acción que se ejecuta al pulsar el botón de desconectar
         btnDesconectar.setOnClickListener(v -> {
 
@@ -44,7 +50,7 @@ public class ActivityMenu extends AppCompatActivity {
             //Envio datos a la otra actividad (en este caso para limpiar el contenido de las cajas de texto)
             intent.putExtra("LIMPIAR", true);
 
-            //Empezar la otra actividad
+            //Enviar datos y terminar esta actividad
             startActivity(intent);
             finish();
 

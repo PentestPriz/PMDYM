@@ -44,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
         tvMensaje = findViewById(R.id.tvMensaje);
         sRecordar = findViewById(R.id.sRecordar);
 
+        //Definición de los intent
         Intent intent = getIntent();
+        Intent intentCambiar = new Intent(this, ActivityMenu.class);
+
         //Booleano que limpa las cajas de texto
         //Lo obtengo de la otra actividad (ActivityMain)
         boolean limpiar = intent.getBooleanExtra("LIMPIAR", false);
@@ -66,6 +69,11 @@ public class MainActivity extends AppCompatActivity {
 
             //Si los campos coinciden con los valores designados da un mensaje de bienvenida
             if (correo.equals("correo@correo.com") && contraseña.equals("123")) {
+
+                //Empezar actividad de cambio
+                intentCambiar.putExtra("CORREO", correo);
+                startActivity(intentCambiar);
+
                 //Cambio a color verde en caso de ser los datos correctos
                 tvMensaje.setTextColor(getResources().getColor(R.color.green));
                 //Da un mensaje u otro en función de si el switch está marcado
@@ -73,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     tvMensaje.setText("Contraseña y correo correctos, bienvenido.\nSe han guardado tus datos de inicio de sesión.");
                 } else {
                     tvMensaje.setText("Contraseña y correo correctos, bienvenido.");
+
                 }//Cierre if-else
 
             } else {
