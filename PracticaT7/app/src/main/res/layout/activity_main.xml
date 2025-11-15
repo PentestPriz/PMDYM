@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3A3838"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTiempoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="113dp"
+        android:text="0:00"
+        android:textColor="#673AB7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbProgreso" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="342dp"
+        android:text="Pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTiempoTotal" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbTitulo"
+        android:layout_width="fill_parent"
+        android:layout_height="115dp"
+        android:background="#342852"
+        android:gravity="center"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Reproductor ++"
+        app:titleMarginStart="50sp"
+        app:titleTextColor="#7985B4" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="256dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="78dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Texto por defecto"
+        android:textColor="#673AB7"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbTitulo" />
+
+    <SeekBar
+        android:id="@+id/sbProgreso"
+        android:layout_width="186dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="113dp"
+        android:backgroundTint="#673AB7"
+        android:foregroundTint="#673AB7"
+        android:progressBackgroundTint="#673AB7"
+        android:progressTint="#673AB7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="342dp"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTiempoActual" />
+
+    <TextView
+        android:id="@+id/tvTiempoActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:text="0:00"
+        android:textColor="#673AB7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbProgreso" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
